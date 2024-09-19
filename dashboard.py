@@ -16,7 +16,7 @@ def load_all_excel_files(folder_path, sheet_name):
     return pd.concat(dataframes, ignore_index=True)
 
 # Load data dari semua file Excel di folder
-folder_path = 'DATA/Bobby Aquatic 1'
+folder_path = "./DATA/Bobby Aquatic 1"
 sheet_name = 'Penjualan'
 penjualan_data = load_all_excel_files(folder_path, sheet_name)
 
