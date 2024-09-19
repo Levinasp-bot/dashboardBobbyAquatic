@@ -27,7 +27,7 @@ def forecast_profit(data, seasonal_periods=365, forecast_horizon=365):
     # Menetapkan frekuensi pada indeks waktu
     daily_profit = daily_profit.asfreq('D', fill_value=0)
 
-    # Membagi data menjadi training dan testing
+    # Membagi data 
     train_size = int(len(daily_profit) * 0.9)
     train, test = daily_profit[:train_size], daily_profit[train_size:]
 
