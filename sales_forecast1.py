@@ -20,10 +20,8 @@ def forecast_profit(data, seasonal_periods=365, forecast_horizon=365):
     daily_profit = data[['TANGGAL', 'LABA']].copy()
     daily_profit['TANGGAL'] = pd.to_datetime(daily_profit['TANGGAL'])
 
-    # Agregasi laba per hari
     daily_profit = daily_profit.groupby('TANGGAL').sum()
 
-    # Menghapus duplikasi indeks
     daily_profit = daily_profit[~daily_profit.index.duplicated(keep='first')]
 
     # Menetapkan frekuensi pada indeks waktu
