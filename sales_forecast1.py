@@ -5,7 +5,6 @@ from sklearn.metrics import mean_absolute_error
 import streamlit as st
 import matplotlib.pyplot as plt
 
-# Fungsi untuk menggabungkan semua file .xlsm dari folder yang dipilih
 def load_all_excel_files(folder_path, sheet_name):
     dataframes = []
     for file in os.listdir(folder_path):
@@ -44,7 +43,6 @@ def forecast_profit(data, seasonal_periods=365, forecast_horizon=365):
         # Prediksi untuk data testing
         hw_forecast_test = hw_model.forecast(len(test))
         
-        # Perhitungan MAE
         mae_test = mean_absolute_error(test, hw_forecast_test)
         
         best_mae = mae_test
