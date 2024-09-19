@@ -24,7 +24,7 @@ def forecast_profit(data, seasonal_periods=365, forecast_horizon=365):
 
     daily_profit = daily_profit[~daily_profit.index.duplicated(keep='first')]
 
-    # Menetapkan frekuensi pada indeks waktu
+    # Menetapkan frekuensi
     daily_profit = daily_profit.asfreq('D', fill_value=0)
 
     # Membagi data 
