@@ -61,7 +61,6 @@ def forecast_profit(data, seasonal_periods=365, forecast_horizon=365):
 def show_dashboard(daily_profit, hw_forecast_future, forecast_horizon=365):
     st.title("Dashboard Prediksi Laba Bobby Aquatic")
 
-    # Filter data berdasarkan tahun
     st.subheader("Filter berdasarkan Tahun")
     selected_years = st.multiselect("Pilih Tahun", daily_profit.index.year.unique())
 
